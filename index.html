@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title ng-bind="title">Logos</title>
+    
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    
+</head>
+<body>
+    
+    <div ng-controller="mainCtrl as mainCtrl">
+        <ng-view></ng-view>
+    </div>
+    
+     
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    
+    <script src="app/controllers/mainCtrl.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/factory/factory.example.js"></script>
+    
+</body>
+</html>
