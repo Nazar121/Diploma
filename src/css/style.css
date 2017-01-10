@@ -1,0 +1,91 @@
+header,
+footer,
+aside,
+article,
+figure,
+figcaption {
+    display: block;
+}
+
+.wrapper {
+    width: 320px;
+    height: 500px;
+    margin: 0 auto;
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #2d3950;
+}
+
+/* Header */
+.header {
+    min-height: 60px;
+    background: #f6f9f9;
+    border: 1px solid blue;
+    padding: 20px 20px 0 20px;
+    position: relative;
+}
+
+.header__logo {
+    display: block;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2d3950;
+}
+
+.header__toggle {
+    width: 40px;
+    height: 35px;
+    background: #2d3950;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 43px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.header__toggle  i {
+    font-size: 26px;
+    color: #f6f9f9;
+}
+
+/* menu */
+
+.header__menu {
+    margin: 20px 0;
+    display: none;
+}
+
+.header__menu li {
+    list-style-type: none;
+    padding: 10px;
+    border-top: 1px solid #2d3950;
+}
+
+.header__menu li:last-child {
+    border-bottom: 1px solid #2d3950;
+}
+
+.header__menu li:hover a {
+/*    color: #3498db; */
+    color: #1c9ded; 
+}
+
+.header__menu a {
+    text-transform: uppercase;
+}
+
+
+/* Banner */
+
+/*.banner {
+    height: 150px;
+    background: url(../img/banner.jpg) no-repeat;
+    background-size: cover;
+}*/
