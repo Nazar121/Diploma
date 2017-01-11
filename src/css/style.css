@@ -7,9 +7,13 @@ figcaption {
     display: block;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 .wrapper {
     width: 320px;
-    height: 500px;
+    height: auto;
     margin: 0 auto;
     border: 2px solid red;
     box-sizing: border-box;
@@ -20,9 +24,27 @@ a {
     color: #2d3950;
 }
 
+h2 {
+    text-transform: uppercase;
+    color: #2d3950;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    color: #999999;
+    line-height: 1.5;
+}
+
+strong {
+    color: #2d3950;
+    font-weight: bold;
+}
+
 /* Header */
 .header {
-    min-height: 60px;
+    min-height: 52px;
     background: #f6f9f9;
     border: 1px solid blue;
     padding: 20px 20px 0 20px;
@@ -31,6 +53,7 @@ a {
 
 .header__logo {
     display: block;
+    width: 75px;
     text-decoration: none;
     font-size: 28px;
     font-weight: bold;
@@ -84,8 +107,142 @@ a {
 
 /* Banner */
 
-/*.banner {
-    height: 150px;
+.banner {
+    height: 250px;
     background: url(../img/banner.jpg) no-repeat;
     background-size: cover;
-}*/
+}
+
+.banner__logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+.banner__title,
+.banner__phone {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+.banner__title {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.banner__phone {
+    font-size: 16px;
+}
+
+.banner__phone i {
+    margin-right: 5px;
+}
+
+.banner__course {
+    display: block;
+    width: 140px;
+    margin: 30px auto 0 auto;
+    padding: 15px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #1c9ded; 
+}
+
+.banner__course:hover {
+    background: #1c9ded;
+}
+
+
+/* Advantages */
+
+.advantages {
+    height: auto;
+    background: #f6f9f9;
+    padding: 40px 20px;
+}
+
+.advantages__block {
+    width: 200px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.advantages__block div {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-bottom: 3px solid #1c9ded;
+}
+
+.block__hat {
+    background: url(../img/hat.png) no-repeat;  
+}
+
+.block__glasses {
+    background: url(../img/glasses.png) no-repeat;
+}
+
+.block__book {
+    background: url(../img/book.png) no-repeat;
+}
+
+.block__users {
+    background: url(../img/users.png) no-repeat;
+}
+
+.block__pencil {
+    background: url(../img/pencil.png) no-repeat;
+}
+
+.block__laptop {
+    background: url(../img/laptop.png) no-repeat;
+}
+
+.advantages__block p {
+    text-align: center;
+}
+
+
+/* Course */
+
+.course {
+    height: 500px;
+    background: #ffffff;
+    padding: 40px 20px;
+}
+
+.course__school {
+    width: 200px;
+    height: 180px;
+    margin: 20px auto;
+    background: #f6f9f9;
+    
+    border: 1px solid red;
+}
+
+
+/* questionAnswer */
+
+.questionAnswer {
+    height: 500px;
+    background: #f6f9f9;
+    padding: 40px 20px;
+    
+    border: 1px solid red; 
+}
+
+.questionAnswer__read {
+    height: 80px;
+    
+    border: 1px solid black;
+}
+
