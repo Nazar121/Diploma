@@ -55,7 +55,16 @@
     
     <article class="questionAnswer">
         <h2>Питання та відповіді</h2>
-        <div class="questionAnswer__read"></div>
+        <div class="questionAnswer__read" ng-repeat="i in mainCtrl.arrQuestionAnswer">
+            <table>
+                <tr>
+                    <th>{{i.id}}</th>
+                    <th ng-click="mainCtrl.questionAnswer($index)">{{i.question}}</th>
+                    <th ng-click="mainCtrl.questionAnswer($index)">+</th>
+                </tr>
+            </table>
+            <div class="read__answer">{{i.answer}}</div>
+        </div>
     </article>
     
 </div>
