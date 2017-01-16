@@ -15,8 +15,9 @@ body {
     width: 320px;
     height: auto;
     margin: 0 auto;
-    border: 2px solid red;
+    border: 1px solid red;
     box-sizing: border-box;
+    position: relative;
 }
 
 a {
@@ -47,7 +48,6 @@ strong {
 .header {
     min-height: 52px;
     background: #f6f9f9;
-    border: 1px solid blue;
     padding: 20px 20px 0 20px;
     position: relative;
 }
@@ -102,6 +102,36 @@ strong {
 }
 
 .header__menu a {
+    text-transform: uppercase;
+}
+
+
+/* Small menu position absolute*/
+
+.header__menu2 {
+    width: 318px;
+    padding: 10px 0;
+    display: none;
+    position: absolute;
+    background: #f6f9f9;
+}
+
+.header__menu2 li {
+    list-style-type: none;
+    padding: 10px;
+    border-top: 1px solid #2d3950;
+}
+
+.header__menu2 li:last-child {
+    border-bottom: 1px solid #2d3950;
+}
+
+.header__menu2 li:hover a {
+    /*    color: #3498db; */
+    color: #1c9ded; 
+}
+
+.header__menu2 a {
     text-transform: uppercase;
 }
 
@@ -221,20 +251,44 @@ strong {
 /* Course */
 
 .course {
-    height: 500px;
+    height: auto;
     background: #ffffff;
     padding: 40px 20px;
 }
 
 .course__school {
     width: 200px;
-    height: 180px;
+    height: auto;
     margin: 20px auto;
     background: #f6f9f9;
+    padding: 10px 0;
+    overflow: hidden;
+    cursor: pointer;
     
     border: 1px solid red;
 }
 
+.course__school:hover .school__title {
+    color: #2d3950;
+    font-weight: bold;
+}
+
+.school__img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100%;
+    
+    border: 1px solid blue;
+}
+
+.course__school figcaption {
+    padding-top: 10px;
+}
+
+.school__title {
+    text-align: center;
+}
 
 /* questionAnswer */
 
@@ -270,6 +324,7 @@ th:nth-child(3) {
     font-weight: bold;
     color: #999999;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 table:hover th:nth-child(3) {
@@ -293,6 +348,55 @@ th:nth-child(2) {
     display: none;
 }
 
+
+
+/* News */ 
+
+.news {
+    height: auto;
+    padding: 40px 20px;
+}
+
+.news__data {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+    
+    border: 1px solid red;
+}
+
+.data__img {
+    width: 100%;
+    height: 120px;
+    
+    border: 1px solid blue;
+}
+
+.news__data figcaption {
+    padding: 10px;
+    background: #2d3950;
+}
+
+.news__data p {
+    text-align: center;
+    color: white;
+}
+
+.data__more {
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #1c9ded; 
+    transition: 0.5s;
+}
+
+.news__data:hover .data__more {
+    background: #1c9ded;
+}
 
 /* AboutUs */
 

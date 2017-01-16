@@ -68,7 +68,7 @@ function mainCtrl(Factory,$http){
     ];
     
     this.menu = function(){
-        $('.header__menu').toggle(200);
+        $('.header__menu2').toggle();
     };
     
     this.questionAnswer = function($index){
