@@ -7,6 +7,11 @@ angular.module('myApp')
             templateUrl:'app/templates/home.html',
             title: 'Logos'
         })
+        .when("/contacts",{
+            controller: 'mainCtrl',
+        templateUrl:'app/templates/contacts.html',
+            title: 'Logos'
+        })
         .otherwise("/");
     
     }) 

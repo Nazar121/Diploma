@@ -1,136 +1,158 @@
 <div class="wrapper">
-    <header class="header">
-        <a href="#" class="header__logo">Logos</a>
-        <div class="header__toggle" ng-click="mainCtrl.menu()"><i class="fa fa-bars"></i></div>
-        <nav class="header__menu">
-            <li><a href="">Головна</a></li>
-            <li><a href="">Курси</a></li>
-            <li><a href="">Розклад</a></li>
-            <li><a href="">Ціни</a></li>
-            <li><a href="">Контакти</a></li>
-        </nav>
-    </header>
+    <div class="wrapper__header">
+        <header class="header">
+            <a href="#" class="header__logo">Logos</a>
+            <div class="header__toggle" ng-click="mainCtrl.menu()"><i class="fa fa-bars"></i></div>
+            <nav class="header__menu">
+                <li><a href="#">Головна</a></li>
+                <li><a href="">Новини</a></li>
+                <li><a href="">Курси</a></li>
+                <li><a href="">Розклад</a></li>
+                <li><a href="">Ціни</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </nav>
+        </header>
+    </div>
     
     <nav class="header__menu2">
-        <li><a href="">Головна</a></li>
+        <li><a href="#">Головна</a></li>
+        <li><a href="">Новини</a></li>
         <li><a href="">Курси</a></li>
         <li><a href="">Розклад</a></li>
         <li><a href="">Ціни</a></li>
-        <li><a href="">Контакти</a></li>
+        <li><a href="#contacts">Контакти</a></li>
     </nav>
     
+    <div class="wrapper__banner">
+        <figure class="banner">
+            <div class="banner__logo">Logos</div>
+            <div class="banner__title">Навчайся з кращими!</div>
+            <div class="banner__phone"><i class="fa fa-phone"></i>(067) 990-37-93</div>
+            <a href="" class="banner__course">Перелік курсів</a>
+        </figure>
+    </div>
     
-    <figure class="banner">
-        <div class="banner__logo">Logos</div>
-        <div class="banner__title">Навчайся з кращими!</div>
-        <div class="banner__phone"><i class="fa fa-phone"></i>(067) 990-37-93</div>
-        <a href="" class="banner__course">Перелік курсів</a>
-    </figure>
+    <div class="wrapper__advantages">
+        <article class="advantages">
+            <h2>Наші переваги</h2>
+            <div>
+                <figure class="advantages__block">
+                    <div class="block__hat"></div>
+                    <p>Максимально <strong>доступне</strong> навчання для кожного</p>
+                </figure>
+                <figure class="advantages__block">
+                    <div class="block__glasses"></div>
+                    <p>Наші викладачі - <strong>кваліфіковані</strong> фахівці</p>
+                </figure>
+                <figure class="advantages__block">
+                    <div class="block__book"></div>
+                    <p>Максимальна <strong>доступність</strong> навчальних матеріалів</p>
+                </figure>
+                <figure class="advantages__block">
+                    <div class="block__users"></div>
+                    <p>Навчальні <strong>групи</strong> від 5 до 15 осіб</p>
+                </figure>
+                <figure class="advantages__block">
+                    <div class="block__pencil"></div>
+                    <p>Перше заняття пробне та  <strong>безкоштовне</strong></p>
+                </figure>
+                <figure class="advantages__block">
+                    <div class="block__laptop"></div>
+                    <p>Сприятлива атмосфера і <strong>комфортні</strong> умови для навчання</p>
+                </figure>
+            </div>
+        </article>
+    </div>
     
-    <article class="advantages">
-        <h2>Наші переваги</h2>
-        <figure class="advantages__block">
-            <div class="block__hat"></div>
-            <p>Максимально <strong>доступне</strong> навчання для кожного</p>
-        </figure>
-        <figure class="advantages__block">
-            <div class="block__glasses"></div>
-            <p>Наші викладачі - <strong>кваліфіковані</strong> фахівці</p>
-        </figure>
-        <figure class="advantages__block">
-            <div class="block__book"></div>
-            <p>Максимальна <strong>доступність</strong> навчальних матеріалів</p>
-        </figure>
-        <figure class="advantages__block">
-            <div class="block__users"></div>
-            <p>Навчальні <strong>групи</strong> від 5 до 15 осіб</p>
-        </figure>
-        <figure class="advantages__block">
-            <div class="block__pencil"></div>
-            <p>Перше заняття пробне та  <strong>безкоштовне</strong></p>
-        </figure>
-        <figure class="advantages__block">
-            <div class="block__laptop"></div>
-            <p>Сприятлива атмосфера і <strong>комфортні</strong> умови для навчання</p>
-        </figure>
-    </article>
+    <div class="wrapper__course">
+        <article class="course">
+            <h2>Напрями навчання</h2>
+            <figure class="course__school">
+                <div class="school__img"></div>
+                <figcaption>
+                    <p class="school__title">Назва курсу</p>
+                </figcaption>
+            </figure>
+        </article>
+    </div>
     
-    <article class="course">
-        <h2>Напрями навчання</h2>
-        <figure class="course__school">
-            <div class="school__img"></div>
-            <figcaption>
-                <p class="school__title">Назва курсу</p>
-            </figcaption>
-        </figure>
-    </article>
+    <div class="wrapper__questionAnswer">
+        <article class="questionAnswer">
+            <h2>Питання та відповіді</h2>
+            <div class="questionAnswer__read" ng-repeat="i in mainCtrl.arrQuestionAnswer">
+                <table>
+                    <tr>
+                        <th>{{i.id}}</th>
+                        <th ng-click="mainCtrl.questionAnswer($index)">{{i.question}}</th>
+                        <th ng-click="mainCtrl.questionAnswer($index)">+</th>
+                    </tr>
+                </table>
+                <div class="read__answer">{{i.answer}}</div>
+            </div>
+        </article>
+    </div>
     
-    <article class="questionAnswer">
-        <h2>Питання та відповіді</h2>
-        <div class="questionAnswer__read" ng-repeat="i in mainCtrl.arrQuestionAnswer">
-            <table>
-                <tr>
-                    <th>{{i.id}}</th>
-                    <th ng-click="mainCtrl.questionAnswer($index)">{{i.question}}</th>
-                    <th ng-click="mainCtrl.questionAnswer($index)">+</th>
-                </tr>
-            </table>
-            <div class="read__answer">{{i.answer}}</div>
-        </div>
-    </article>
+    <div class="wrapper__news">
+        <article class="news">
+            <h2>Новини</h2>
+            <figure class="news__data">
+                <div class="data__img"></div>
+                <figcaption>
+                    <p>16/01/2017</p>
+                    <p>Заголовок для новини</p>
+                    <a href="" class="data__more">Детальніше</a>
+                </figcaption>
+            </figure>
+        </article>
+    </div>
     
-    <article class="news">
-        <h2>Новини</h2>
-        <figure class="news__data">
-            <div class="data__img"></div>
-            <figcaption>
-                <p>16/01/2017</p>
-                <p>Заголовок для новини</p>
-                <a href="" class="data__more">Детальніше</a>
-            </figcaption>
-        </figure>
-    </article>
-    
-    <article class="aboutUs">
-        <h2>Про Нас</h2>
-        <p><strong>Logos IT Academy</strong> це новітній навчальний центр, мета якого полягає у розвитку ІТ-освіти в Україні. Навчання проводиться з максимальним наголосом на практику, а навчальні програми розроблені відповідно до сучасних потреб провідних ІТ-компаній України.</p>
-        <br>
-        <p>Ми впевнені у якості нашого навчання – тому кожен бажаючий може <strong>безкоштовно відвідати пробне заняття</strong> будь-якого курсу та пересвідчитись на власному досвіді у кваліфікації викладачів, підході до студентів та актуальності навчальних програм.</p>
-        <br>
-        <p>Також спеціально для тих, хто лише робить перші кроки в світ ІТ, ми розробили <strong>безкоштовні курси: «Основи програмування», «Основи WEB-розробки», «Основи тестування ПЗ».</strong></p>
-        <br>
-        <p>Навчаючи студентів уже близько 5 років, ми здобули безцінний досвід організації максимально зручного та ефективного навчального процесу.</p>
-    </article>
+    <div class="wrapper__aboutUs">
+        <article class="aboutUs">
+            <h2>Про Нас</h2>
+            <p><strong>Logos IT Academy</strong> це новітній навчальний центр, мета якого полягає у розвитку ІТ-освіти в Україні. Навчання проводиться з максимальним наголосом на практику, а навчальні програми розроблені відповідно до сучасних потреб провідних ІТ-компаній України.</p>
+            <br>
+            <p>Ми впевнені у якості нашого навчання – тому кожен бажаючий може <strong>безкоштовно відвідати пробне заняття</strong> будь-якого курсу та пересвідчитись на власному досвіді у кваліфікації викладачів, підході до студентів та актуальності навчальних програм.</p>
+            <br>
+            <p>Також спеціально для тих, хто лише робить перші кроки в світ ІТ, ми розробили <strong>безкоштовні курси: «Основи програмування», «Основи WEB-розробки», «Основи тестування ПЗ».</strong></p>
+            <br>
+            <p>Навчаючи студентів уже близько 5 років, ми здобули безцінний досвід організації максимально зручного та ефективного навчального процесу.</p>
+        </article>
+    </div>
     
     <article class="map">
         <iframe src="http://mapbuildr.com/frame/fwkd7y" frameborder="0"></iframe>
     </article>
     
-    <footer class="footerTop">
-        <div class="footerTop__location">
-            <div class="location__img"></div>
-            <p>вул. Івана Франка 61, <br>
-            адміністрація - каб.500, <br>
-             м. Львів, Україна, 79011</p>
-            <br>
-            <p>Години роботи Академії: <br>
-                Пн-Пт 09.00-22.00, <br>
-                Сб-Нд 10.00-17.00.</p>
-        </div>
-        <div class="footerTop__phone">
-            <div class="phone__img"></div>
-            <p>(067) 990-37-93 <br>
-                (050) 990-05-66 <br>
-                (032) 225-74-06 <br>
-                0 (800) 309-777</p>
-            <br>
-            <p>Skype: logos_lviv <br>
-                Еmail: info@lgs.lviv.ua</p>
-        </div>
-    </footer>
+    <div class="wrapper__footerTop">
+        <footer class="footerTop">
+            <div class="footerTop__location">
+                <div class="location__img"></div>
+                <p>вул. Івана Франка 61, <br>
+                адміністрація - каб.500, <br>
+                 м. Львів, Україна, 79011</p>
+                <br>
+                <p>Години роботи Академії: <br>
+                    Пн-Пт 09.00-22.00, <br>
+                    Сб-Нд 10.00-17.00.</p>
+            </div>
+            <div class="footerTop__phone">
+                <div class="phone__img"></div>
+                <p>(067) 990-37-93 <br>
+                    (050) 990-05-66 <br>
+                    (032) 225-74-06 <br>
+                    0 (800) 309-777</p>
+                <br>
+                <p>Skype: logos_lviv <br>
+                    Еmail: info@lgs.lviv.ua</p>
+            </div>
+        </footer>
+    </div>
     
-    <footer class="footerBottom">
-        <p><span>&#169;	</span> 2011-2017 Logos IT Academy - використання матеріалів Logos IT Academy дозволено з попередньої згоди правовласників.</p>
-    </footer>
+    <div class="wrapper__footerBottom">
+        <footer class="footerBottom">
+            <p><span>&#169;	</span> 2011-2017 Logos IT Academy - використання матеріалів Logos IT Academy дозволено з попередньої згоди правовласників.</p>
+        </footer>
+    </div>
     
+    <a href="" class="wrapper__up" ng-click="mainCtrl.navigationScroll($ivent)"></a>
 </div>

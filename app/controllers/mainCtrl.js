@@ -67,12 +67,25 @@ function mainCtrl(Factory,$http){
         }
     ];
     
+    //  Поява/скривання меню на малих екранах
     this.menu = function(){
         $('.header__menu2').toggle();
     };
     
+    //  Поява/скривання відповідей на питпння
     this.questionAnswer = function($index){
         var index = $index;
         $('.read__answer').eq(index).toggle();
     };
+    
+    // Навігація по сайті
+   /* this.navigationScroll = function(event) {
+        event.preventDefault();
+        var id = $(this).attr('href');
+        var top = $(id).offset().top;
+        $('body, html').animate({
+            scrollTop: top
+        }, 1500);
+    });*/
+    
 };

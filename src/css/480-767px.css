@@ -1,0 +1,88 @@
+@media screen and (min-width:480px) and (max-width:767px){
+
+    .wrapper {
+        max-width: 767px;
+        height: auto;
+        margin: 0 auto;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+
+    h2 {
+        text-transform: uppercase;
+        color: #2d3950;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    
+    /* Banner */
+
+    .banner {
+        height: 400px;
+        background: url(../img/banner.jpg) no-repeat;
+        background-size: cover;
+    }
+    
+    .banner__logo {
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+        padding: 60px 0;
+        font-size: 40px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .banner__title,
+    .banner__phone {
+        width: 400px;
+        height: auto;
+        margin: 0 auto;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .banner__title {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+    .banner__phone {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    
+    /* News */
+
+    .data__img {
+        width: 100%;
+        height: 300px;
+
+        border: 1px solid blue;
+    }
+    
+    
+    /* Footer Top */
+    
+    .location__img {
+        width: 60%;
+        height: 50px;
+        background: url(../img/footer-icon1.png) no-repeat 50% 50%;
+        background-size: cover;
+        margin: 0 auto 20px auto;
+    }
+    
+    .phone__img {
+        width: 60%;
+        height: 50px;
+        background: url(../img/footer-icon2.png) no-repeat 50% 50%;
+        background-size: cover;
+        margin: 20px auto;
+    }
+
+}

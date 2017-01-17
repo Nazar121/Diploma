@@ -1,0 +1,22 @@
+@media screen and (min-width:320px) and (max-width:479px){
+    
+    .wrapper {
+        max-width: 479px;
+        height: auto;
+        margin: 0 auto;
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    
+    /* News */
+    
+    .data__img {
+        width: 100%;
+        height: 200px;
+
+        border: 1px solid blue;
+    }
+    
+    
+}
