@@ -28,7 +28,7 @@ a {
 h2 {
     text-transform: uppercase;
     color: #2d3950;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 40px;
@@ -481,4 +481,47 @@ th:nth-child(2) {
 
 .wrapper__up:hover {
     opacity: 1;
+}
+
+
+
+/* ----- Template Contacts ----- */
+
+/* Contacts */
+
+.contacts {
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.contacts__info {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contacts__info p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#info__email {
+    text-align: left;
+}
+
+.contacts__info p span {
+    margin-left: 33px;
+}
+
+.contacts__info i {
+    font-size: 22px;
+    color: #1c9ded;
+    margin-right: 10px;
+}
+
+#map iframe {
+    width: 100%;
+    height: 400px;
 }

@@ -291,7 +291,7 @@
     /* Footer Bottom */
 
     .wrapper__footerBottom {
-        background: #ffffff;
+        background: #f6f9f9;
     }
     
     .footerBottom {
@@ -302,4 +302,24 @@
         padding: 20px 30px;
     }
 
+    
+    
+    /* ----- Template Contacts ----- */
+    
+    /* Contacts */
+    
+    .contacts {
+        max-width: 1200px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 30px;
+    }
+    
+    .contacts__info {
+        width: 55%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    
 }
