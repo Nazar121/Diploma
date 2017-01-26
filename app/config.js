@@ -9,8 +9,23 @@ angular.module('myApp')
         })
         .when("/contacts",{
             controller: 'mainCtrl',
-        templateUrl:'app/templates/contacts.html',
-            title: 'Logos'
+            templateUrl:'app/templates/contacts.html',
+            title: 'Контакти Logos'
+        })
+        .when("/course",{
+            controller: 'mainCtrl',
+            templateUrl:'app/templates/course.html',
+            title: 'Комп"ютерні курси Logos'
+        })
+        .when("/schedule",{
+            controller: 'mainCtrl',
+            templateUrl:'app/templates/schedule.html',
+            title: 'Розклад занять | Графік роботи Logos'
+        })
+        .when("/price",{
+            controller: 'mainCtrl',
+            templateUrl:'app/templates/price.html',
+            title: 'Ціни курсів в Logos'
         })
         .otherwise("/");
     

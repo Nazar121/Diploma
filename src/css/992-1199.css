@@ -126,6 +126,10 @@
     
     /* Course */
 
+    .wrapper__course {
+        background: #ffffff;
+    }
+    
     .course__school {
         width: 30%;
         height: auto;
@@ -135,7 +139,17 @@
         overflow: hidden;
         cursor: pointer;
     }
-    
+
+    .course div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .school__img {
+        display: block;
+    }
     
     /* questionAnswer */
 
@@ -214,6 +228,77 @@
         background: url(../img/footer-icon2.png) no-repeat 50% 50%;
         background-size: cover;
         margin: 0 auto 20px auto;
+    }
+    
+    
+    /* ----- Template Price ----- */
+
+    .wrapper__price {
+        background: #ffffff;
+    }
+
+    .price {
+        max-width: 1199px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 30px;
+    }
+
+    /* Скриваю таблицю для малих екранів */
+    .price__tableSmall {
+        display: none;
+    }
+
+    /* Таблиця для великих екранів */
+    .price__tableBig {
+        display: block;
+        width: 100%;
+    }
+
+    .price td,th {
+        border: 1px solid #2d3950;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 18px;
+    }
+
+    .price th {
+        padding: 25px;
+        background: #1c9ded;
+        color: #ffffff;
+    }
+
+    .price td {
+        padding: 15px;
+        color: #2d3950;
+        line-height: 1.5;
+    }
+
+    /* Price Contact */
+    .price__contact {
+        padding: 20px 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .price__contact p {
+        font-size: 18px;
+    }
+
+    .price__contact h2 {
+        margin: 5px 0;
+    }
+
+    /* btn */
+    .contact__btn {
+        display: block;
+        width: 200px;
+        padding: 20px 0;
+        color: #ffffff;
+        background: #1c9ded;
+        border: 1px solid #1c9ded;
+        margin: 20px auto 0 auto;
+        cursor: pointer;
     }
 
 }

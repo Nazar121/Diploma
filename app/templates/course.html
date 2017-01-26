@@ -23,25 +23,16 @@
         <li><a href="#contacts">Контакти</a></li>
     </nav>
     
-    <div class="wrapper__contacts">
-        <article class="contacts">
-            <h2>Контакти</h2>
+    <div class="wrapper__course">
+        <article class="course">
+            <h2>Курси</h2>
             <div>
-                <div class="contacts__info">
-                    <p><i class="fa fa-clock-o"></i> Години роботи навчально центру: Пн-Пт<strong> 09.00-22.00</strong>, Сб-Нд <strong>10.00-17.00</strong></p> 
-                    <p><i class="fa fa-comment-o"></i> Години роботи адміністрації: Пн-Пт <strong>09.00-22.00</strong>, Сб-Нд <strong>10.00-17.00</strong></p>
-                    <p><i class="fa fa-phone"></i> Тел: (067) 990-37-93 <br>
-                        <span>Тел: (050) 990-05-66</span> <br>
-                        <span>Тел: (032) 225-74-06</span> <br>
-                        <span>Тел: 0 (800) 309-777</span></p>
-                    <p><i class="fa fa-skype"></i> Skype: logos_lviv</p>
-                    <p id="info__email"><i class="fa fa-envelope"></i> Еmail: info@lgs.lviv.ua</p>
-                    <p><i class="fa fa-map-marker"></i> м. Львів, вул. Івана Франка 61, адміністрація – 5 поверх, 
-                        каб. 500, 79011</p>
-                </div>
-                <article class="map" id="map">
-                    <iframe src="http://mapbuildr.com/frame/fwkd7y" frameborder="0"></iframe>
-                </article>
+                <figure class="course__school" ng-repeat="i in mainCtrl.arrAllCourse">
+                    <img src="{{i.src_Course}}" class="school__img" alt="">
+                    <figcaption>
+                        <p class="school__title">{{i.title_Course}}</p>
+                    </figcaption>
+                </figure>
             </div>
         </article>
     </div>
@@ -76,7 +67,5 @@
             <p><span>&#169;	</span> 2011-2017 Logos IT Academy - використання матеріалів Logos IT Academy дозволено з попередньої згоди правовласників.</p>
         </footer>
     </div>
-
-    <a href="" class="wrapper__up" ng-click="mainCtrl.navigationScroll($ivent)"></a>
     
 </div>

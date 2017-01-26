@@ -57,6 +57,23 @@
     }
 
     
+    /* Course */
+    .course div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course__school {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        background: #f6f9f9;
+        padding: 15px 0;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    
     /* News */
 
     .data__img {
@@ -85,4 +102,91 @@
         margin: 20px auto;
     }
 
+    
+    
+    /* ----- Template Price ----- */
+
+    .wrapper__price {
+        background: #ffffff;
+    }
+
+    .price {
+        max-width: 991px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 30px;
+    }
+    
+    /* Скриваю таблицю для великих екранів */
+    .price__tableBig {
+        display: none;
+    }
+    
+    /* Таблиця для малих екранів */
+    .price__tableSmall {
+        width: 100%; 
+        margin-bottom: 40px;
+    }
+    
+    .price td,th {
+        border-top: 1px solid #2d3950;
+        border-left: 1px solid #2d3950;
+        border-right: 1px solid #2d3950;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 18px;
+    }
+    
+    .price td:last-child {
+        border-bottom: 1px solid #2d3950;
+    } 
+    
+    .price__tableSmall tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .price__tableSmall th {
+        padding: 25px;
+        background: #1c9ded;
+        color: #ffffff;
+    }
+    
+    .price__tableSmall td {
+        padding: 15px;
+        color: #2d3950;
+        line-height: 1.5;
+    }
+    
+    .price__tableSmall td span {
+        color: #999999;
+    }
+    
+    /* Price Contact */
+    .price__contact {
+        padding: 20px 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .price__contact p {
+        font-size: 18px;
+    }
+
+    .price__contact h2 {
+        margin: 5px 0;
+    }
+
+    /* btn */
+    .contact__btn {
+        display: block;
+        width: 200px;
+        padding: 20px 0;
+        color: #ffffff;
+        background: #1c9ded;
+        border: 1px solid #1c9ded;
+        margin: 20px auto 0 auto;
+        cursor: pointer;
+    }
+    
 }

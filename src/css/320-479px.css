@@ -9,6 +9,23 @@
     }
     
     
+    /* Course */
+    .course div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course__school {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        background: #f6f9f9;
+        padding: 15px 0;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    
     /* News */
     
     .data__img {

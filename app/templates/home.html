@@ -6,9 +6,9 @@
             <nav class="header__menu">
                 <li><a href="#">Головна</a></li>
                 <li><a href="">Новини</a></li>
-                <li><a href="">Курси</a></li>
-                <li><a href="">Розклад</a></li>
-                <li><a href="">Ціни</a></li>
+                <li><a href="#course">Курси</a></li>
+                <li><a href="#schedule">Розклад</a></li>
+                <li><a href="#price">Ціни</a></li>
                 <li><a href="#contacts">Контакти</a></li>
             </nav>
         </header>
@@ -17,9 +17,9 @@
     <nav class="header__menu2">
         <li><a href="#">Головна</a></li>
         <li><a href="">Новини</a></li>
-        <li><a href="">Курси</a></li>
-        <li><a href="">Розклад</a></li>
-        <li><a href="">Ціни</a></li>
+        <li><a href="#course">Курси</a></li>
+        <li><a href="#schedule">Розклад</a></li>
+        <li><a href="#price">Ціни</a></li>
         <li><a href="#contacts">Контакти</a></li>
     </nav>
     
@@ -66,13 +66,15 @@
     
     <div class="wrapper__course">
         <article class="course">
-            <h2>Напрями навчання</h2>
-            <figure class="course__school">
-                <div class="school__img"></div>
-                <figcaption>
-                    <p class="school__title">Назва курсу</p>
-                </figcaption>
-            </figure>
+            <h2>Курси</h2>
+            <div>
+                <figure class="course__school" ng-repeat="i in mainCtrl.arrAllCourse">
+                    <img src="{{i.src_Course}}" class="school__img" alt="">
+                    <figcaption>
+                        <p class="school__title">{{i.title_Course}}</p>
+                    </figcaption>
+                </figure>
+            </div>
         </article>
     </div>
     

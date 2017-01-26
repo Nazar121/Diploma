@@ -271,13 +271,19 @@ strong {
     font-weight: bold;
 }
 
+.course div {
+    display: flex;
+    /*flex-wrap: wrap;
+    justify-content: space-between;*/
+    flex-direction: column;
+}
+
 .school__img {
     width: 100px;
     height: 100px;
     margin: 0 auto;
     border-radius: 100%;
-    
-    border: 1px solid blue;
+    display: block;
 }
 
 .course__school figcaption {
@@ -301,22 +307,22 @@ strong {
     margin-bottom: 20px;
 }
 
-table {
+.questionAnswer__read table {
     width: 100%;
 }
 
-th {
+.questionAnswer__read th {
     border: 1px solid #2d3950;
     vertical-align: middle;
 }
 
-th:nth-child(1) {
+.questionAnswer__read th:nth-child(1) {
     width: 25px;
     background: #2d3950;
     color: white;
 }
 
-th:nth-child(3) {
+.questionAnswer__read th:nth-child(3) {
     width: 25px;
     font-size: 20px;
     font-weight: bold;
@@ -325,13 +331,13 @@ th:nth-child(3) {
     transition: 0.5s;
 }
 
-table:hover th:nth-child(3) {
+.questionAnswer__read table:hover th:nth-child(3) {
     background: #1c9ded;
     border: 1px solid #1c9ded;
     color: #2d3950;
 }
 
-th:nth-child(2) {
+.questionAnswer__read th:nth-child(2) {
     padding: 10px 0;
     color: #999999;
     line-height: 1.5;
@@ -524,4 +530,90 @@ th:nth-child(2) {
 #map iframe {
     width: 100%;
     height: 400px;
+}
+
+
+
+/* ----- Template Price ----- */
+
+.wrapper__price {
+    background: #ffffff;
+}
+
+.price {
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+/* Скриваю таблицю для великих екранів */
+.price__tableBig {
+    display: none;
+}
+
+/* Таблиця для малих екранів */
+.price__tableSmall {
+    width: 100%; 
+    margin-bottom: 40px;
+}
+
+.price td,th {
+    border-top: 1px solid #2d3950;
+    border-left: 1px solid #2d3950;
+    border-right: 1px solid #2d3950;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.price td:last-child {
+    border-bottom: 1px solid #2d3950;
+} 
+
+.price__tableSmall tr {
+    display: flex;
+    flex-direction: column;
+}
+
+.price__tableSmall th {
+    padding: 25px;
+    background: #1c9ded;
+    color: #ffffff;
+}
+
+.price__tableSmall td {
+    padding: 15px;
+    color: #2d3950;
+    line-height: 1.5;
+}
+
+.price__tableSmall td span {
+    color: #999999;
+}
+
+/* Price Contact */
+.price__contact {
+    padding: 20px 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.price__contact p {
+    font-size: 18px;
+}
+
+.price__contact h2 {
+    margin: 5px 0;
+}
+
+/* btn */
+.contact__btn {
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    color: #ffffff;
+    background: #1c9ded;
+    border: 1px solid #1c9ded;
+    margin: 20px auto 0 auto;
+    cursor: pointer;
 }

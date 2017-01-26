@@ -88,4 +88,42 @@ function mainCtrl(Factory,$http){
         }, 1500);
     });*/
     
+    
+    this.repeatCourse = function(){
+        $http.post("http://localhost:3000/repeatCourse")
+            .success((res) => {
+            this.arrAllCourse = res;
+            console.log("arrAllCourse Success ",res);
+        })
+            .error((err) => {
+            console.log("ERROR arrAllCourse ",err)
+        })
+    }
+    this.repeatCourse();
+    
+    this.repeatSchedule = function(){
+        $http.post("http://localhost:3000/repeatSchedule")
+            .success((res) => {
+            this.arrAllSchedule = res;
+            console.log("repeatSchedule Success ",res);
+        })
+            .error((err) => {
+            console.log("ERROR arrAllCourse ",err)
+        })
+    }
+    this.repeatSchedule();
+    
+    this.repeatPrice = function(){
+        $http.post("http://localhost:3000/repeatPrice")
+            .success((res) => {
+            this.arrAllPrice = res;
+            console.log("repeatPrice Success ",res);
+        })
+            .error((err) => {
+            console.log("ERROR arrAllCourse ",err)
+        })
+    }
+    this.repeatPrice();
+    
+    
 };

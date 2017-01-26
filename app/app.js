@@ -1,2 +1,2 @@
-angular.module('myApp',['ngRoute','myServ','mainCtrl'])
+angular.module('myApp',['ngRoute','myServ','mainCtrl','filters'])
     
