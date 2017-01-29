@@ -8,7 +8,7 @@ figcaption {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {
@@ -34,7 +34,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-p {
+p,ol li {
     color: #999999;
     line-height: 1.5;
 }
@@ -257,6 +257,7 @@ strong {
 }
 
 .course__school {
+    display: block;
     width: 100%;
     height: auto;
     margin: 20px auto;
@@ -617,3 +618,161 @@ strong {
     margin: 20px auto 0 auto;
     cursor: pointer;
 }
+
+
+
+
+/* Template courseName */
+.wrapper__content {
+    background: #ffffff;
+}
+
+.content {
+    height: auto;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+/* content description */
+
+.content__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__description img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 0 auto 30px auto;
+}
+
+
+/* content Programs */
+.content__programs {
+    margin-top: 50px;   
+}
+
+.content__programs ol {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* content Price */
+
+.content_price {
+    margin-top: 50px;  
+    padding: 20px 0;
+}
+
+.price__info {
+    display: flex;
+    flex-direction: column
+}
+
+.price__info figure {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price__info figure p {
+    margin-bottom: 10px;
+}
+
+.price__info figure i {
+    font-size: 40px;
+    color: #2d3950;
+}
+
+.price__info figure i:hover {
+    color: #1c9ded;
+}
+
+.price__info figure h3 {
+    margin-top: 10px;
+    font-size: 32px;
+    color: #1c9ded;
+}
+
+
+/* content oclock */
+.content__oclock {  
+    padding: 20px 0;
+}
+
+/* Таблиця для великих екранів */
+.oclock__tableBig {
+    display: none;
+}
+
+/* Таблиця для малих екранів  */
+.oclock__tableSmall {
+    display: table;
+    width: 100%;
+}
+
+.oclock__tableSmall tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.oclock__tableSmall td,th {
+    border-top: 1px solid #2d3950;
+    border-left: 1px solid #2d3950;
+    border-right: 1px solid #2d3950;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.oclock__tableSmall td:last-child {
+    border-bottom: 1px solid #2d3950;
+} 
+
+.oclock__tableSmall td {
+    padding: 15px;
+    color: #2d3950;
+    line-height: 1.5;
+}
+
+.oclock__tableSmall td span {
+    color: #999999;
+}
+
+/* content details */
+.content__details {
+    padding: 20px 0;
+}
+
+.details__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.details__info figure {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.details__info figure div {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.info_img1 {
+    background: url(../img/oclock_details.png) no-repeat;
+}
+
+.info_img2 {
+    background: url(../img/prog_details.png) no-repeat;
+}
+
+.info_img3 {
+    background: url(../img/serteficat_details.png) no-repeat;
+}
+

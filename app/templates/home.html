@@ -28,7 +28,7 @@
             <div class="banner__logo">Logos</div>
             <div class="banner__title">Навчайся з кращими!</div>
             <div class="banner__phone"><i class="fa fa-phone"></i>(067) 990-37-93</div>
-            <a href="" class="banner__course">Перелік курсів</a>
+            <a href="#course" class="banner__course">Перелік курсів</a>
         </figure>
     </div>
     
@@ -68,12 +68,12 @@
         <article class="course">
             <h2>Курси</h2>
             <div>
-                <figure class="course__school" ng-repeat="i in mainCtrl.arrAllCourse">
+                <a href="#courseName" class="course__school" ng-repeat="i in mainCtrl.arrAllCourse" ng-click="mainCtrl.repeatCourseName($index)">
                     <img src="{{i.src_Course}}" class="school__img" alt="">
                     <figcaption>
                         <p class="school__title">{{i.title_Course}}</p>
                     </figcaption>
-                </figure>
+                </a>
             </div>
         </article>
     </div>

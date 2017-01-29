@@ -27,6 +27,11 @@ angular.module('myApp')
             templateUrl:'app/templates/price.html',
             title: 'Ціни курсів в Logos'
         })
+        .when("/courseName",{
+        controller: 'mainCtrl',
+        templateUrl:'app/templates/courseName.html',
+        title: 'Курси в Logos'
+    })
         .otherwise("/");
     
     }) 

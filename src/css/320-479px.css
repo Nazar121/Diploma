@@ -16,6 +16,7 @@
     }
 
     .course__school {
+        display: block;
         width: 100%;
         height: auto;
         margin: 20px 0;
@@ -35,5 +36,15 @@
         border: 1px solid blue;
     }
     
+    
+    /* template courseName */
+    
+    /* content details */
+    .details__info figure {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto 30px auto;
+    }
+
     
 }

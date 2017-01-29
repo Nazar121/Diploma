@@ -67,10 +67,12 @@ function mainCtrl(Factory,$http){
         }
     ];
     
+    
     //  Поява/скривання меню на малих екранах
     this.menu = function(){
         $('.header__menu2').toggle();
     };
+    
     
     //  Поява/скривання відповідей на питпння
     this.questionAnswer = function($index){
@@ -89,6 +91,7 @@ function mainCtrl(Factory,$http){
     });*/
     
     
+    //  Функція для репіту всіх курсів
     this.repeatCourse = function(){
         $http.post("http://localhost:3000/repeatCourse")
             .success((res) => {
@@ -101,6 +104,8 @@ function mainCtrl(Factory,$http){
     }
     this.repeatCourse();
     
+    
+    //  Функція для рупіту всіх розкладів
     this.repeatSchedule = function(){
         $http.post("http://localhost:3000/repeatSchedule")
             .success((res) => {
@@ -113,6 +118,8 @@ function mainCtrl(Factory,$http){
     }
     this.repeatSchedule();
     
+    
+    //  Функція для репіту цін усіх курсів
     this.repeatPrice = function(){
         $http.post("http://localhost:3000/repeatPrice")
             .success((res) => {
@@ -125,5 +132,39 @@ function mainCtrl(Factory,$http){
     }
     this.repeatPrice();
     
+    
+    //  Функція яка дає,всю інфу про даний курс
+    this.repeatCourseName = function($index){
+        var index = $index;
+        console.log(index);
+        this.courseName = function(){
+            var obj = {
+                title_Course: this.arrAllCourse[index].title_Course
+            }
+            $http.post("http://localhost:3000/courseName",obj)
+                .success((res) => {
+                this.arrCourseName = res;
+                console.log("arrCourseName Success ",res);
+            })
+                .error((err) => {
+                console.log("ERROR arrCourseName ",err)
+            })
+        };
+        this.courseNameOclock = function(){
+            var obj = {
+                title_Course: this.arrAllCourse[index].title_Course
+            }
+            $http.post("http://localhost:3000/courseNameOclock",obj)
+                .success((res) => {
+                this.courseNameOclock = res;
+                console.log("courseNameOclock Success ",res);
+            })
+                .error((err) => {
+                console.log("ERROR courseNameOclock ",err)
+            })
+        };
+        this.courseName();
+        this.courseNameOclock();
+    };
     
 };

@@ -131,6 +131,7 @@
     }
     
     .course__school {
+        display: block;
         width: 30%;
         height: auto;
         margin: 20px 0;
@@ -301,4 +302,111 @@
         cursor: pointer;
     }
 
+    
+    
+    
+    /* Template courseName */
+    .wrapper__content {
+        background: #ffffff;
+    }
+
+    .content {
+        height: auto;
+        padding: 20px 30px;
+        margin: 0 auto;
+    }
+
+    
+    /* content description */
+    .content__description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content__description img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        margin: 0 60px 30px auto;
+    }
+    
+    
+    /* content Programs */
+    .content__programs {
+        margin-top: 50px;   
+    }
+
+    .content__programs ol {
+        width: 55%;
+        margin: 0 auto;
+    }
+    
+    
+    /* content Price */
+    .price__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .price__info figure {
+        width: 24%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    
+    /* content oclock */
+
+    /* Таблиця для малих екранів  */
+    .oclock__tableSmall {
+        display: none;
+    }
+
+    /* Таблиця для великих екранів */
+    .oclock__tableBig {
+        display: table;
+        width: 100%;
+    }
+    
+    .oclock__tableBig td,th {
+        border: 1px solid #2d3950;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 18px;
+    }
+
+    .oclock__tableBig th {
+        padding: 25px;
+        background: #1c9ded;
+        color: #ffffff;
+    }
+
+    .oclock__tableBig td {
+        padding: 15px;
+        color: #2d3950;
+        line-height: 1.5;
+    }
+    
+    
+    /* content details */
+    .content__details {
+        margin-top: 20px;
+        padding: 20px 0;
+    }
+
+    .details__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .details__info figure {
+        width: 25%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
 }

@@ -1,0 +1,140 @@
+<div class="wrapper">
+    <div class="wrapper__header">
+        <header class="header">
+            <a href="#" class="header__logo">Logos</a>
+            <div class="header__toggle" ng-click="mainCtrl.menu()"><i class="fa fa-bars"></i></div>
+            <nav class="header__menu">
+                <li><a href="#">Головна</a></li>
+                <li><a href="">Новини</a></li>
+                <li><a href="#course">Курси</a></li>
+                <li><a href="#schedule">Розклад</a></li>
+                <li><a href="#price">Ціни</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </nav>
+        </header>
+    </div>
+
+    <nav class="header__menu2">
+        <li><a href="#">Головна</a></li>
+        <li><a href="">Новини</a></li>
+        <li><a href="#course">Курси</a></li>
+        <li><a href="#schedule">Розклад</a></li>
+        <li><a href="#price">Ціни</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+    </nav>
+
+    <div class="wrapper__content">
+        <article class="content">
+            <h2>{{mainCtrl.arrCourseName[0].title_Course}}</h2>
+            <div class="content__description">
+                <img src="{{mainCtrl.arrCourseName[0].src_Course}}" alt="">
+                <p>{{mainCtrl.arrCourseName[0].description_Course}}</p>
+            </div>
+            <div class="content__programs">
+               <h2>Програма навчання</h2>
+                <ol type="1">
+                    <li ng-repeat="i in mainCtrl.arrCourseName">{{i.description_Programs}}</li>
+                </ol>
+            </div>
+            <div class="content_price">
+                <h2>Вартість</h2>
+                <div class="price__info">
+                    <figure>
+                        <p>Кількість занять</p>
+                        <div><i class="fa fa-book"></i></div>
+                        <h3>{{mainCtrl.arrCourseName[0].countLessons_Price}}</h3>
+                    </figure>
+                    <figure>
+                        <p>Кількість академ. годин</p>
+                        <div><i class="fa fa-clock-o"></i></div>
+                        <h3>{{mainCtrl.arrCourseName[0].countAcademOclock_Price}}</h3>
+                    </figure>
+                    <figure>
+                        <p>Ціна індивідуального курсу</p>
+                        <div><i class="fa fa-user"></i></div>
+                        <h3>{{mainCtrl.arrCourseName[0].priceGroupLessons_Price | moneyFilter}}</h3>
+                    </figure>
+                    <figure>
+                        <p>Ціна групового курсу</p>
+                        <div><i class="fa fa-users"></i></div>
+                        <h3>{{mainCtrl.arrCourseName[0].priceIndividLessons_Price | moneyFilter}}</h3>
+                    </figure>
+                </div>
+            </div>
+            <div class="content__oclock">
+                <h2>Розклад</h2>
+                <table class="oclock__tableBig">
+                    <tr>
+                        <th>Час проведення заняття</th>
+                        <th>В які дні</th>
+                        <th>Курс стартує</th>
+                        <th>Вартість групового навчання</th>
+                    </tr>
+                    <tr ng-repeat="i in mainCtrl.courseNameOclock">
+                        <td>{{i.time_Times}}</td>
+                        <td>{{i.days_Times}}</td>
+                        <td>{{i.start_Times | date :  "dd.MM.y" }}</td>
+                        <td>{{i.priceGroupLessons_Price | moneyFilter}}</td>
+                    </tr>
+                </table>
+                <table class="oclock__tableSmall">
+                    <tr ng-repeat="i in mainCtrl.courseNameOclock">
+                        <td><span>Час проведення заняття</span> <br> {{i.time_Times}}</td>
+                        <td><span>В які дні</span> <br> {{i.days_Times}}</td>
+                        <td><span>Курс стартує</span> <br> {{i.start_Times | date :  "dd.MM.y" }}</td>
+                        <td><span>Вартість групового навчання</span> <br> {{i.priceGroupLessons_Price | moneyFilter}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content__details">
+                <h2>Деталі курсу</h2>
+                <div class="details__info">
+                    <figure>
+                        <div class="info_img1"></div>
+                        <p>Тривалість одного заняття 90хв. (2 академічні години)</p>
+                    </figure>
+                    <figure>
+                        <div class="info_img2"></div>
+                        <p>Можливе написання індивідуальної програми для Вас!</p>
+                    </figure>
+                    <figure>
+                        <div class="info_img3"></div>
+                        <p>По закінченню курсу видається сертифікат.</p>
+                    </figure>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="wrapper__footerTop">
+        <footer class="footerTop">
+            <div class="footerTop__location">
+                <div class="location__img"></div>
+                <p>вул. Івана Франка 61, <br>
+                    адміністрація - каб.500, <br>
+                    м. Львів, Україна, 79011</p>
+                <br>
+                <p>Години роботи Академії: <br>
+                    Пн-Пт 09.00-22.00, <br>
+                    Сб-Нд 10.00-17.00.</p>
+            </div>
+            <div class="footerTop__phone">
+                <div class="phone__img"></div>
+                <p>(067) 990-37-93 <br>
+                    (050) 990-05-66 <br>
+                    (032) 225-74-06 <br>
+                    0 (800) 309-777</p>
+                <br>
+                <p>Skype: logos_lviv <br>
+                    Еmail: info@lgs.lviv.ua</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="wrapper__footerBottom">
+        <footer class="footerBottom">
+            <p><span>&#169;	</span> 2011-2017 Logos IT Academy - використання матеріалів Logos IT Academy дозволено з попередньої згоди правовласників.</p>
+        </footer>
+    </div>
+
+</div>
