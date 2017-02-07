@@ -12,3 +12,9 @@ angular.module('filters',[])
             }
         }
     })
+    .filter('newsTitleFilter', function () { 
+        return function (str) {
+            var res=str.charAt(0).toUpperCase()+str.slice(1).toLocaleLowerCase();
+            return res;
+        }
+    })

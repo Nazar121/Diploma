@@ -28,13 +28,23 @@ angular.module('myApp')
             title: 'Ціни курсів в Logos'
         })
         .when("/courseName",{
-        controller: 'mainCtrl',
-        templateUrl:'app/templates/courseName.html',
-        title: 'Курси в Logos'
-    })
+            controller: 'mainCtrl',
+            templateUrl:'app/templates/courseName.html',
+            title: 'Курси в Logos'
+        })
+        .when("/news",{
+            controller: 'mainCtrl',
+            templateUrl:'app/templates/news.html',
+            title: 'Новини в Logos'
+        })
+        .when("/newsName",{
+            controller: 'mainCtrl',
+            templateUrl:'app/templates/newsName.html',
+            title: 'Новини в Logos'
+        })
         .otherwise("/");
     
-    }) 
+        }) 
 
     .run(['$rootScope', function($rootScope) {
 

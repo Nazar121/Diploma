@@ -96,7 +96,7 @@ function mainCtrl(Factory,$http){
         $http.post("http://localhost:3000/repeatCourse")
             .success((res) => {
             this.arrAllCourse = res;
-            console.log("arrAllCourse Success ",res);
+            /*console.log("arrAllCourse Success ",res);*/
         })
             .error((err) => {
             console.log("ERROR arrAllCourse ",err)
@@ -110,7 +110,7 @@ function mainCtrl(Factory,$http){
         $http.post("http://localhost:3000/repeatSchedule")
             .success((res) => {
             this.arrAllSchedule = res;
-            console.log("repeatSchedule Success ",res);
+            /*console.log("repeatSchedule Success ",res);*/
         })
             .error((err) => {
             console.log("ERROR arrAllCourse ",err)
@@ -124,7 +124,7 @@ function mainCtrl(Factory,$http){
         $http.post("http://localhost:3000/repeatPrice")
             .success((res) => {
             this.arrAllPrice = res;
-            console.log("repeatPrice Success ",res);
+            /*console.log("repeatPrice Success ",res);*/
         })
             .error((err) => {
             console.log("ERROR arrAllCourse ",err)
@@ -136,7 +136,7 @@ function mainCtrl(Factory,$http){
     //  Функція яка дає,всю інфу про даний курс
     this.repeatCourseName = function($index){
         var index = $index;
-        console.log(index);
+        /*console.log(index);*/
         this.courseName = function(){
             var obj = {
                 title_Course: this.arrAllCourse[index].title_Course
@@ -144,7 +144,7 @@ function mainCtrl(Factory,$http){
             $http.post("http://localhost:3000/courseName",obj)
                 .success((res) => {
                 this.arrCourseName = res;
-                console.log("arrCourseName Success ",res);
+                /*console.log("arrCourseName Success ",res);*/
             })
                 .error((err) => {
                 console.log("ERROR arrCourseName ",err)
@@ -157,14 +157,63 @@ function mainCtrl(Factory,$http){
             $http.post("http://localhost:3000/courseNameOclock",obj)
                 .success((res) => {
                 this.courseNameOclock = res;
-                console.log("courseNameOclock Success ",res);
+                /*console.log("courseNameOclock Success ",res);*/
             })
                 .error((err) => {
                 console.log("ERROR courseNameOclock ",err)
             })
         };
+        this.courseNamePrograms = function(){
+            var obj = {
+                title_Course: this.arrAllCourse[index].title_Course
+            }
+            $http.post("http://localhost:3000/courseNamePrograms",obj)
+                .success((res) => {
+                this.arrCoursePrograms = res;
+                /*console.log("arrCoursePrograms Success ",res);*/
+            })
+                .error((err) => {
+                console.log("ERROR arrCoursePrograms ",err)
+            })
+        };
         this.courseName();
         this.courseNameOclock();
+        this.courseNamePrograms();
+    };
+    
+    
+    //  Функція ака вертає перелік всіх курсів
+    this.repeatNews = function(){
+        $http.post("http://localhost:3000/repeatNews")
+            .success((res) => {
+            this.arrNews = res;
+            /*console.log("arrNews Success ",res);*/
+        })
+            .error((err) => {
+            console.log("ERROR arrNews ",err)
+        })
+    };
+    this.repeatNews();
+    
+    
+    //  Функція яка дає,всю інфу про дану новину
+    this.repeatNewsName = function($index){
+        var index = $index;
+        /*console.log(this.arrNews[index].title_News);*/
+        this.newsName = function(){
+            var obj = {
+                title_News: this.arrNews[index].title_News
+            }
+            $http.post("http://localhost:3000/newsName",obj)
+                .success((res) => {
+                this.arrNewsName = res;
+                /*console.log("arrNewsName Success ",res);*/
+            })
+                .error((err) => {
+                console.log("ERROR arrNewsName ",err)
+            })
+        };
+        this.newsName();
     };
     
 };

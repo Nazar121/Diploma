@@ -66,6 +66,41 @@ app.post("/courseNameOclock",(req,res) => {
 });
 
 
+//  Повертаю інфу про програму даного курсу
+app.post("/courseNamePrograms",(req,res) => {
+    var obj = {
+        title_Course: req.body.title_Course
+    }
+    connection.query('select * from Course as c join Programs as p on c.id_Course=p.fk_Programs_Course where c.title_Course=?',[obj.title_Course],(err,rows) => {
+        if(err) throw err;
+        res.send(rows);
+    });
+});
+
+
+//  Повертаю масив новин
+app.post("/repeatNews",(req,res) => {
+    connection.query('select * from News order by id_News desc',(err,rows) => {
+        if(err) throw err;
+        res.send(rows);
+    });
+});
+
+
+//  Повертаю інфу про дану новину
+app.post("/newsName",(req,res) => {
+    var obj = {
+        title_News: req.body.title_News
+    }
+    connection.query('select * from News as n join newsdesc as nd on n.id_News=nd.fk_NewsDesc_News where n.title_News=?',[obj.title_News],(err,rows) => {
+        if(err) throw err;
+        res.send(rows);
+    });
+});
+
+
+
+
 var server = app.listen(3000, (err) => {
     if(err) throw err;
     console.log("Server start on port 3000!");

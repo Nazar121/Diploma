@@ -1,11 +1,11 @@
 <div class="wrapper">
     <div class="wrapper__header">
         <header class="header">
-            <a href="#" class="header__logo">Logos</a>
+            <a href="#" class="header__logo"></a>
             <div class="header__toggle" ng-click="mainCtrl.menu()"><i class="fa fa-bars"></i></div>
             <nav class="header__menu">
                 <li><a href="#">Головна</a></li>
-                <li><a href="">Новини</a></li>
+                <li><a href="#news">Новини</a></li>
                 <li><a href="#course">Курси</a></li>
                 <li><a href="#schedule">Розклад</a></li>
                 <li><a href="#price">Ціни</a></li>
@@ -16,7 +16,7 @@
 
     <nav class="header__menu2">
         <li><a href="#">Головна</a></li>
-        <li><a href="">Новини</a></li>
+        <li><a href="#news">Новини</a></li>
         <li><a href="#course">Курси</a></li>
         <li><a href="#schedule">Розклад</a></li>
         <li><a href="#price">Ціни</a></li>
@@ -33,7 +33,7 @@
             <div class="content__programs">
                <h2>Програма навчання</h2>
                 <ol type="1">
-                    <li ng-repeat="i in mainCtrl.arrCourseName">{{i.description_Programs}}</li>
+                    <li ng-repeat="i in mainCtrl.arrCoursePrograms">{{i.description_Programs}}</li>
                 </ol>
             </div>
             <div class="content_price">
@@ -52,12 +52,12 @@
                     <figure>
                         <p>Ціна індивідуального курсу</p>
                         <div><i class="fa fa-user"></i></div>
-                        <h3>{{mainCtrl.arrCourseName[0].priceGroupLessons_Price | moneyFilter}}</h3>
+                        <h3>{{mainCtrl.arrCourseName[0].priceIndividLessons_Price | moneyFilter}}</h3>
                     </figure>
                     <figure>
                         <p>Ціна групового курсу</p>
                         <div><i class="fa fa-users"></i></div>
-                        <h3>{{mainCtrl.arrCourseName[0].priceIndividLessons_Price | moneyFilter}}</h3>
+                        <h3>{{mainCtrl.arrCourseName[0].priceGroupLessons_Price | moneyFilter}}</h3>
                     </figure>
                 </div>
             </div>

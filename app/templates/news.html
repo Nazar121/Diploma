@@ -23,38 +23,18 @@
         <li><a href="#contacts">Контакти</a></li>
     </nav>
 
-    <div class="wrapper__price">
-        <article class="price">
-            <h2>Ціни</h2>
-            <table class="price__tableBig">
-                <tr>
-                    <th>Назва курсу</th>
-                    <th>Кількість занять</th>
-                    <th>Кількість академ. годин</th>
-                    <th>Вартість навчання в групі</th>
-                    <th>Вартість індивідуального навчання</th>
-                </tr>
-                <tr ng-repeat="i in mainCtrl.arrAllPrice">
-                    <td>{{i.title_Course}}</td>
-                    <td>{{i.countLessons_Price}}</td>
-                    <td>{{i.countAcademOclock_Price}}</td>
-                    <td>{{i.priceGroupLessons_Price | moneyFilter}}</td>
-                    <td>{{i.priceIndividLessons_Price | moneyFilter}}</td>
-                </tr>
-            </table>
-            <table class="price__tableSmall" ng-repeat="i in mainCtrl.arrAllPrice">
-                <tr>
-                    <th>{{i.title_Course}}</th>
-                    <td><span>Кількість занять</span> <br> {{i.countLessons_Price}}</td>
-                    <td><span>Кількість академ. годин</span> <br> {{i.countAcademOclock_Price}}</td>
-                    <td><span>Вартість навчання в групі</span> <br> {{i.priceGroupLessons_Price | moneyFilter}}</td>
-                    <td><span>Вартість індивідуального навчання</span> <br> {{i.priceIndividLessons_Price | moneyFilter}}</td>
-                </tr>
-            </table>
-            <div class="price__contact">
-                <p>Для запису на курси телефонуйте за номерами:</p>
-                <h2>(067) 990-37-93, (032) 242-777-2</h2>
-                <a href="#course" class="contact__btn">Курси</a>
+    <div class="wrapper__news">
+        <article class="news">
+            <h2>Новини</h2>
+            <div>
+                <a href="#newsName" class="news__data" ng-repeat="i in mainCtrl.arrNews" ng-click="mainCtrl.repeatNewsName($index)">
+                    <img src="{{i.src_News}}" alt="" class="data__img">
+                    <div>
+                        <p>{{i.date_News | date :  "dd.MM.y"}}</p>
+                        <p>{{i.title_News | newsTitleFilter}}</p>
+                        <div class="data__more"><p>Детальніше</p></div>
+                    </div>
+                </a>
             </div>
         </article>
     </div>

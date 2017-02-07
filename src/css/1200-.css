@@ -36,12 +36,11 @@
 
     .header__logo {
         display: block;
-        width: 85px;
-        height: 30px;
+        width: 149px;
+        height: 37px;
+        background: url(../img/logo.png) no-repeat;
+        background-size: cover;
         text-decoration: none;
-        font-size: 28px;
-        font-weight: bold;
-        color: #2d3950;
     }
 
     .header__toggle {
@@ -229,20 +228,47 @@
         padding: 40px 30px;
     }
     
+    .news div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
     .news__data {
+        display: block;
         width: 30%;
         height: auto;
         margin: 0;
         cursor: pointer;
-
-        border: 1px solid red;
+    }
+    
+    .news__data p {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+    
+    .news__data p:nth-child(2) {
+        min-height: 50px;
     }
 
     .data__img {
+        display: block;
         width: 100%;
-        height: 150px;
-
-        border: 1px solid blue;
+        height: 200px;
+    }
+    
+    .data__more {
+        width: 90%;
+        margin: 10px auto 0 auto;
+        padding: 10px 0;
+        font-size: 16px;
+        text-align: center;
+        color: #ffffff;
+        border: 1px solid #1c9ded; 
+        transition: 0.5s;
     }
     
     
@@ -556,4 +582,41 @@
         background: url(../img/serteficat_details.png) no-repeat;
     }
     
+    
+    
+    
+    /* Template newsName */
+    .newsName {
+        max-width: 1200px;
+        height: auto;
+        padding: 20px 30px;
+        margin: 0 auto;
+    }
+    
+    .newsName__titleImg {
+        display: block;
+        width: 50%;
+        height: 300px;
+        margin: 0 auto 40px auto;
+    }
+    
+    .newsName__infoNews {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0 0 50px 0;
+    }
+    
+    .newsName__infoNews img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 30px;
+    }
+    
+    .infoNews__title {
+        font-size: 18px;
+        color: #2d3950;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 }

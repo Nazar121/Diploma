@@ -1,11 +1,11 @@
 <div class="wrapper">
     <div class="wrapper__header">
         <header class="header">
-            <a href="#" class="header__logo">Logos</a>
+            <a href="#" class="header__logo"></a>
             <div class="header__toggle" ng-click="mainCtrl.menu()"><i class="fa fa-bars"></i></div>
             <nav class="header__menu">
                 <li><a href="#">Головна</a></li>
-                <li><a href="">Новини</a></li>
+                <li><a href="#news">Новини</a></li>
                 <li><a href="#course">Курси</a></li>
                 <li><a href="#schedule">Розклад</a></li>
                 <li><a href="#price">Ціни</a></li>
@@ -16,7 +16,7 @@
     
     <nav class="header__menu2">
         <li><a href="#">Головна</a></li>
-        <li><a href="">Новини</a></li>
+        <li><a href="#news">Новини</a></li>
         <li><a href="#course">Курси</a></li>
         <li><a href="#schedule">Розклад</a></li>
         <li><a href="#price">Ціни</a></li>
@@ -97,14 +97,16 @@
     <div class="wrapper__news">
         <article class="news">
             <h2>Новини</h2>
-            <figure class="news__data">
-                <div class="data__img"></div>
-                <figcaption>
-                    <p>16/01/2017</p>
-                    <p>Заголовок для новини</p>
-                    <a href="" class="data__more">Детальніше</a>
-                </figcaption>
-            </figure>
+            <div>
+                <a href="#newsName" class="news__data" ng-repeat="i in mainCtrl.arrNews" ng-click="mainCtrl.repeatNewsName($index)">
+                    <img src="{{i.src_News}}" alt="" class="data__img">
+                    <div>
+                        <p>{{i.date_News | date :  "dd.MM.y"}}</p>
+                        <p>{{i.title_News | newsTitleFilter}}</p>
+                        <div class="data__more"><p>Детальніше</p></div>
+                    </div>
+                </a>
+            </div>
         </article>
     </div>
     

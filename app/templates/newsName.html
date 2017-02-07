@@ -23,39 +23,19 @@
         <li><a href="#contacts">Контакти</a></li>
     </nav>
 
-    <div class="wrapper__price">
-        <article class="price">
-            <h2>Ціни</h2>
-            <table class="price__tableBig">
-                <tr>
-                    <th>Назва курсу</th>
-                    <th>Кількість занять</th>
-                    <th>Кількість академ. годин</th>
-                    <th>Вартість навчання в групі</th>
-                    <th>Вартість індивідуального навчання</th>
-                </tr>
-                <tr ng-repeat="i in mainCtrl.arrAllPrice">
-                    <td>{{i.title_Course}}</td>
-                    <td>{{i.countLessons_Price}}</td>
-                    <td>{{i.countAcademOclock_Price}}</td>
-                    <td>{{i.priceGroupLessons_Price | moneyFilter}}</td>
-                    <td>{{i.priceIndividLessons_Price | moneyFilter}}</td>
-                </tr>
-            </table>
-            <table class="price__tableSmall" ng-repeat="i in mainCtrl.arrAllPrice">
-                <tr>
-                    <th>{{i.title_Course}}</th>
-                    <td><span>Кількість занять</span> <br> {{i.countLessons_Price}}</td>
-                    <td><span>Кількість академ. годин</span> <br> {{i.countAcademOclock_Price}}</td>
-                    <td><span>Вартість навчання в групі</span> <br> {{i.priceGroupLessons_Price | moneyFilter}}</td>
-                    <td><span>Вартість індивідуального навчання</span> <br> {{i.priceIndividLessons_Price | moneyFilter}}</td>
-                </tr>
-            </table>
-            <div class="price__contact">
-                <p>Для запису на курси телефонуйте за номерами:</p>
-                <h2>(067) 990-37-93, (032) 242-777-2</h2>
-                <a href="#course" class="contact__btn">Курси</a>
-            </div>
+    <div class="wrapper__newsName">
+        <article class="newsName">
+            <img src="{{mainCtrl.arrNewsName[0].src_News}}" alt="" class="newsName__titleImg">
+            <h2>{{mainCtrl.arrNewsName[0].title_News}}</h2>
+            <article class="newsName__infoNews" ng-repeat="i in mainCtrl.arrNewsName">
+                <figure>
+                    <img src="{{i.src_NewsDesc}}" alt="">
+                </figure>
+                <div>
+                    <h3 class="infoNews__title">{{i.title_NewsDesc}}</h3>
+                    <p class="infoNews__desc">{{i.description_NewsDesc}}</p>
+                </div>
+            </article>
         </article>
     </div>
 
