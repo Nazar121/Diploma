@@ -51,7 +51,7 @@
     /* menu */
 
     .header__menu {
-        width: 62%;
+        width: 50%;
         margin: 0;
         display: flex;
         justify-content: space-between;
