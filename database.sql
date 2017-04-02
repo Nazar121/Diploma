@@ -43,6 +43,10 @@ ALTER TABLE Times ADD CONSTRAINT Times_Course FOREIGN KEY (fk_Times_Course) REFE
 ALTER TABLE Price ADD CONSTRAINT Price_Course FOREIGN KEY (fk_Price_Course) REFERENCES Course(id_Course);
 
 
+ALTER TABLE news ADD COLUMN fk_News_Course INT;
+ALTER TABLE news ADD CONSTRAINT News_Course FOREIGN KEY (fk_News_Course) REFERENCES Course(id_Course);
+
+
 /* JavaScript*/
 INSERT INTO Course (title_Course,description_Course,src_Course) VALUES
 ("JavaScript","Курси JavaSсript у Львові охоплюють основи створення інтерактивних веб-сторінок за допомогою мови JavaScript і об’єктно-орієнтованого програмування. Основний акцент в курсі зроблений на практичних завданнях, що дозволяє краще засвоїти матеріал і закріпити отримані знання. Використання фреймворку JQuery і JQuery UI дозволить легко і елегантно організувати логіку роботи веб-додатків будь-якої складності на стороні клієнта. Ви також навчитеся основним засобам доступу до вузлів DOM документа для ефективної розробки сценаріїв сторінки.","/src/img/course_JS.png");
